@@ -5,7 +5,7 @@ const docs = {
         let db = await openDb();
 
         try {
-            return await db.all('SELECT * FROM documents');
+            return await db.all('SELECT rowid as id, * FROM documents');
         } catch (e) {
             console.error(e);
 
